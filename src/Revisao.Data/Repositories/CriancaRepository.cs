@@ -21,7 +21,7 @@ namespace Revisao.Data.Repositories
 
         public void Adicionar(Crianca crianca)
         {
-            List<Crianca> criancas = new List<Crianca>();
+            List<Crianca> criancas = LerProdutosDoArquivo();
             int proximoCodigo = ObterProximoCodigoDisponivel();
             criancas.Add(crianca);
             EscreverProdutosNoArquivo(criancas);
